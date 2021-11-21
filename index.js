@@ -7,4 +7,4 @@ console.log('Hello lexfer');
 
 console.log('cambio del new feature');
 
-console.log('console desde el 1er feature creado ')
+console.log('console desde el 1er feature creadoooo ')
