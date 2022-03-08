@@ -27,3 +27,6 @@
 1. [ctrl] + [X]
 2. pulsar [S]
 3. Escribir mensaje y pulsar [Enter]
+
+
+<https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow>
