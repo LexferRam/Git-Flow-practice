@@ -30,3 +30,45 @@
 
 
 <https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow>
+
+------------------------------------------------------------------------------------------------------------------
+
+
+### GitFlow: 
+Es flujo de trabajo para la gestión de ramas en git, ordena qué tipo de ramas se deben configurar y cómo fusionarlas.
+
+Éste flujo de trabajo utiliza dos ramas para registrar el historial del proyecto:
+* Main: almacena el historial de publicación oficial.
+* Develop: sirve como rama de integración para las funciones
+
+Instalar GitFlow en el sistema:
+- [x] brew install git-flow
+
+**Inicializar el proyecto:**
+- [x] git flow init (crear ramas para ti)
+
+**A continuación, otros desarrolladores deberían clonar el repositorio central y crear/actualizar la rama develop:**
+- [x] git checkout develop
+- [x] git pull origin develop
+
+**Crear la ramas feature que utiliza la rama develop como rama primaria:**
+NOTA: Las ramas feature suelen crearse a partir de la última rama develop.
+- [x] git flow feature start feature/nombreFeature
+
+SIN gitFlow:
+- [ ] git checkout develop
+- [ ] git checkout -b feature_branch
+
+ **Cuando una función está terminada, se vuelve a fusionar a develop:**
+- [x] git add .
+- [x] git commit -m "commit message"
+- [x] git checkout develop
+- [x] git pull origin develop
+- [x] git flow feature finish feature/nombreFeature
+- [x] git push origin develop
+
+**Creación de rama realease:**
+- [x] debes bifurcar una rama release a partir de develop
+- [x] Cuando está lista para el lanzamiento, la rama release se fusiona en main y se etiqueta con un número de versión. Además, debería volver a fusionarse en develop, ya que esta podría haber progresado desde que se iniciara la publicación.
+- [x] Se puede crear una nueva rama release: git flow release start 0.1.0
+- [x] Finalizar rama realease: git flow release finish '0.1.0'
